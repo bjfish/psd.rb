@@ -15,7 +15,7 @@ before_install:
 - "> ~/.rvm/gemsets/default.gems"
 - rvm mount $PWD -n truffleruby
 - rvm use ext-truffleruby
-- export RUBYOPT=-ropenssl-stubs
+- export RUBYOPT='-ropenssl-stubs -rnokogiri-stubs'
 - gem uninstall bundler -a -x
 - gem install bundler -v 1.13.7
 - bundle install
